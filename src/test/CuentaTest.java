@@ -26,6 +26,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		aux.setSaldo(0);
 	}
 
 	@AfterEach
@@ -34,13 +35,14 @@ class CuentaTest {
 
 	@Test
 	void testIngresar() {
+		
 		aux.Ingresar(1000);
 		assertEquals(aux.getSaldo(), 1000);// ingresa 1000 --> saldo = 1000
 	}
 	@Test
 	void testRetirar() {
-		aux.Ingresar(0);
-		assertEquals(aux.getSaldo(), 1000);
+		aux.Retirar(100);
+		assertEquals(aux.getSaldo(), 0);
 	}
 
 }
