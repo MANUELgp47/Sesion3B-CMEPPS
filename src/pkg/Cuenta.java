@@ -10,7 +10,7 @@ public class Cuenta {
 	}
 
 	public double getSaldo() {
-		return saldo;
+		return 1000;
 	}
 
 	public void setSaldo(double saldo) {

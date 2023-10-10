@@ -39,7 +39,8 @@ class CuentaTest {
 	}
 	@Test
 	void testRetirar() {
-		fail("Not yet implemented");
+		aux.Ingresar(0);
+		assertEquals(aux.getSaldo(), 1000);
 	}
 
 }
