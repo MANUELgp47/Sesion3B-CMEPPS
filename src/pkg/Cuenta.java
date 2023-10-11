@@ -39,19 +39,16 @@ public class Cuenta {
 	}
 
 	public void Retirar(int i) {
-		if (this.getSaldo() >= i) {
+		if (this.getSaldo() - i > -501) {
 			this.setSaldo(this.getSaldo() - i);
 
 			try {
-				movimientos.add(new Movimiento(i, numero, TipoMovimiento.H));
+				movimientos.add(new Movimiento(i, numero, TipoMovimiento.D));
 			} catch (Exception e) {
 
 			}
-		}
-	}
-
-	public void generarMovimiento(Movimiento e) {
-		movimientos.add(e);
+		}else
+			System.out.println("Fondos insuficientes (saldo "+this.getSaldo()+"€ ) en la cuenta "+this.numero+" para el reintegro de "+i+"€");
 	}
 
 }

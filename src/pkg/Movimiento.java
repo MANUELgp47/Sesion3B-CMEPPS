@@ -6,12 +6,6 @@ public class Movimiento {
 	private String	detalle;
 	private TipoMovimiento signo;
 	
-	
-	
-	public Movimiento() {
-		super();
-	}
-
 
 	public Movimiento(double importe, String detalle, TipoMovimiento signo) {
 		super();
